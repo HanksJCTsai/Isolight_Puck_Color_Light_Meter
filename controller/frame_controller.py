@@ -127,13 +127,12 @@ class frame_controller(QtWidgets.QMainWindow):
     def getSettings(self):
         _json_file_ = pathlib.Path("_serial_port_.json")
         if _json_file_.exists() == False:
-            _setting_dict_ = { "Port Path": "","Baud Rate": 115200, "Parity": "N", "Data Bits": 8, "Stop Bit": 1, "Time Out": 10, "Interval Time": 10, "Send CMD List":"GRCCT,GRL,GRXYZ,GRYXY,", "Log File Name":"Log.log"}
+            _setting_dict_ = { "Port Path": "","Baud Rate": "115200", "Parity": "None", "Data Bits": "8", "Stop Bit": "1", "Time Out": 10, "Interval Time": 10, "Send CMD List":"GRCCT,GRL,GRXYZ,GRYXY,", "Log File Name":"Log.log"}
             # Serializing json
             _json_object_ = json.dumps(_setting_dict_)
             # Writing to sample.json
             with open("_serial_port_.json", "w") as outfile:
                 outfile.write(_json_object_)
-        
         with open("_serial_port_.json","r") as openfile:
             # Reading from json file
             _read_dict_ = json.load(openfile)
@@ -146,7 +145,7 @@ class frame_controller(QtWidgets.QMainWindow):
         self.IntervalTime = _read_dict_["Interval Time"]
         self.SendCMDList = _read_dict_["Send CMD List"]
         self.LogFileName = _read_dict_["Log File Name"]
-
+        
     def closeEvent(self, event):
         reply = QtWidgets.QMessageBox.question(self, 'Message', "Do you want to exit?",
                                  QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No, QtWidgets.QMessageBox.No)

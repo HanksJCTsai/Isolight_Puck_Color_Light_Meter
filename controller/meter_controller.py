@@ -81,11 +81,11 @@ class meter_controller(QtWidgets.QWidget):
         if self.parent.SerialPort != None and self.parent.SerialPort != "":
             self.ui_port.setCurrentIndex((list(self.parent.serial_port_names)).index(self.parent.SerialPort))
         if self.parent.DataBits != None and self.parent.DataBits != "":
-            self.ui_data_bits.setCurrentIndex((list(self.parent.serial_port_databits)).index(self.parent.DataBits))
+            self.ui_data_bits.setCurrentIndex((list(self.parent.serial_port_databits)).index(str(self.parent.DataBits)))
         if self.parent.StopBit != None and self.parent.StopBit != "":
-            self.ui_stop_bits.setCurrentIndex((list(self.parent.serial_port_stopbits)).index(self.parent.StopBit))
+            self.ui_stop_bits.setCurrentIndex((list(self.parent.serial_port_stopbits)).index(str(self.parent.StopBit)))
         if self.parent.BaudRate != None and self.parent.BaudRate != "":
-            self.ui_baud_rate.setCurrentIndex((list(self.parent.serial_port_baudrates)).index(self.parent.BaudRate))
+            self.ui_baud_rate.setCurrentIndex((list(self.parent.serial_port_baudrates)).index(str(self.parent.BaudRate)))
         if self.parent.Parity != None and self.parent.Parity != "":
             self.ui_parity.setCurrentIndex((list(self.parent.serial_port_parity)).index(self.parent.Parity))
         if self.parent.TimeOut !=None or self.parent.TimeOut !="":

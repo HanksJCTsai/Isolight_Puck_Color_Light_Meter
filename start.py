@@ -1,4 +1,3 @@
-from unicodedata import name
 import qdarkstyle
 import sys
 import os
