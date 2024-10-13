@@ -1,4 +1,4 @@
-# About Isolight_Puck_Color_Light_Meter porject
+# About Isolight_Puck_Color_Light_Meter project
 This project required from girlfriend :heart_eyes: what can help her to quickly and correct for get the GRCCT(color temperature), GRL(light level in lux), GRXYZ(color in XYZ coordinates), GRYXY(color in Yxy coordinates) value right now, So I accepted it as my first side project in the GITHUB.com. :grin::grin:
 
   I choose the python for my dev language and using QT for my frame base on windows GUI, Why the python and base QT:question: Because I'm not very familiar with python and QT frame, So I took two weeks (from zero to hero:thumbsup::thumbsup:) to complete it and grope python and QT frame, inculde learning how to QT Designer and how to serial communication in mac/pc:computer: by myself, Oaky, If you think it well done! Please give me a :star:
